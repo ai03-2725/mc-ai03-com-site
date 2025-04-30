@@ -4,6 +4,16 @@ import '@fontsource-variable/inter';
 import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import Favicon from '@components/framework/Favicon.astro';
 import Nav from '@components/framework/Nav.astro';
+
+const { 
+	title, 
+	description, 
+} = Astro.props;
+
+
+const siteName = "mc.ai03.com"
+const titleString = title === "Home" ? siteName : title + " - " + siteName
+
 ---
 
 <!doctype html>
@@ -20,14 +30,14 @@ import Nav from '@components/framework/Nav.astro';
 		<meta name="viewport" content="width=device-width" />
 
 		<!-- SEO and page details -->
-		<title>mc.ai03.com</title>
-		<meta name="description" content="A small Minecraft community operated by ai03 Design Studio." />
+		<title>{titleString}</title>
+		<meta name="description" content={description} />
 
 		<!-- Favicon tags -->
 		<Favicon />
 
 		<!-- Open graph -->
-		<meta property="og:title" content="mc.ai03.com" />
+		<meta property="og:title" content={titleString} />
 		<meta property="og:site_name" content="mc.ai03.com" />
 		<meta property="og:type" content="website" />
 		<meta name="og:image" content="https://mc.ai03.com/images/open-graph/og-default.jpg" />
@@ -35,15 +45,16 @@ import Nav from '@components/framework/Nav.astro';
 		<meta property="og:url" content={`https://mc.ai03.com${Astro.url.pathname}`} />
 
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:title" content="mc.ai03.com" />
+		<meta name="twitter:title" content={titleString} />
 		<meta name="twitter:image" content="https://mc.ai03.com/images/open-graph/og-default.jpg" />
 		<meta name="twitter:image:alt" content="mc.ai03.com" />
-		<meta name="twitter:description" content="A small Minecraft community operated by ai03 Design Studio." />
+		<meta name="twitter:description" content={description} />
 		<meta name="twitter:site" content="@ai03_2725" />
 
 		<meta property="image" content="https://mc.ai03.com/images/open-graph/og-default.jpg" />
 
 		<meta name="generator" content={Astro.generator} />
+		<link rel="sitemap" href="/sitemap-index.xml" />
 
 		<!-- Preload fonts -->
 		<link rel="preload" as="font" type="font/woff2" fetchpriority="low" href={interWoff2} crossorigin/>
