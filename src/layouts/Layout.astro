@@ -2,7 +2,8 @@
 import '/src/styles/global.css'
 import '@fontsource-variable/inter';
 import interWoff2 from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
-import Favicon from '../components/Favicon.astro';
+import Favicon from '@components/framework/Favicon.astro';
+import Nav from '@components/framework/Nav.astro';
 ---
 
 <!doctype html>
@@ -48,16 +49,17 @@ import Favicon from '../components/Favicon.astro';
 		<link rel="preload" as="font" type="font/woff2" fetchpriority="low" href={interWoff2} crossorigin/>
 
 	</head>
-	<body>
-		<slot />
+	<body style="margin: 0;">
+		<div class="flex flex-col min-h-screen">
+			<div class="order-2 grow">
+				<slot />
+			</div>
+			<!-- <div class={`order-3 ${noFooterPadding !== true && "mt-20"}`}>
+				<Footer />
+			</div> -->
+			<div class="order-1 z-10">
+				<Nav transparent={false} lightMode={false} />
+			</div>
+		</div>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

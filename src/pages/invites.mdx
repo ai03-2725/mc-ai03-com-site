@@ -1,0 +1,44 @@
+---
+---
+import Prose from '@components/Prose.astro';
+import Layout from '@layouts/Layout.astro';
+import HeaderBanner from "/src/assets/header.avif"
+
+<Layout>
+
+
+	<div class="w-full !h-[360px] overflow-hidden">
+    <div class="w-full h-full relative">
+      <img src={HeaderBanner.src} class="absolute w-full h-full object-cover" />
+      <div class="absolute w-full h-full bg-[#00000060]" />
+      <div class="absolute w-full h-full flex flex-col justify-center items-center text-white gap-7">
+        <h1 class="text-3xl md:text-4xl font-[500]">Invites</h1>
+      </div>
+    </div>
+	</div>
+
+	<div class="container mx-auto py-16 px-6">
+
+		<Prose>
+			## Semi-Private Community
+
+      mc.ai03.com is a semi-private community.  
+      Only invited members may join.  
+
+      ## Invites
+
+      Each member has two invites, which they can use to invite others to the community.  
+      These invites are irreversible and permanent.  
+        
+      If a member violates the community rules, the invitee may also be held responsible.  
+
+      ## Being Invited
+
+      The simplest method is to ask someone with access to use one of their two invites via the /invite command.  
+      Another method is to ask ai03 in their [Discord](https://ai03.com/social/) in the correct channels - given enough server capacity and proof of credibility, an invite may be issued directly.  
+
+		</Prose>
+	</div>
+
+
+</Layout>

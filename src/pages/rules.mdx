@@ -1,0 +1,57 @@
+---
+---
+import Prose from '@components/Prose.astro';
+import Layout from '@layouts/Layout.astro';
+import HeaderBanner from "/src/assets/header.avif"
+
+<Layout>
+
+
+	<div class="w-full !h-[360px] overflow-hidden">
+    <div class="w-full h-full relative">
+      <img src={HeaderBanner.src} class="absolute w-full h-full object-cover" />
+      <div class="absolute w-full h-full bg-[#00000060]" />
+      <div class="absolute w-full h-full flex flex-col justify-center items-center text-white gap-7">
+        <h1 class="text-3xl md:text-4xl font-[500]">Community Rules</h1>
+      </div>
+    </div>
+	</div>
+
+	<div class="container mx-auto py-16 px-6">
+
+		<Prose>
+			## The Basics
+
+			- Keep chat civil and welcoming. No illegal activities, spam, NSFW content, etc.
+      - Keep things all-age, all-race, all-gender friendly.
+      - Please refrain from discussing sensitive topics such as politics and religion.
+      - No griefing, cheating, hacking, or other harmful/unfair gameplay.
+      - Refrain from constructions that excessively strain the server such as lag machines.
+      In summary, behave like mature adults with basic etiquette.
+
+      ## Unique Rules
+      - In general, please keep gameplay cooperative rather than hostile.
+      - PvP is allowed only with prior agreement from those involved.
+      - Mind others' efforts, property, and space; ask for permission when necessary.
+      - If there is conflict, discuss and resolve in an orderly manner.
+
+      ## Invite System
+
+      Read about the invite system [here](/invites).
+      - Each member may invite up to two others into the community using the /invite command.
+      - In case of community rule violations, the person who invited the violator is held simultaneously responsible.
+
+      ## On Exploits
+
+      Due to their game-breaking nature, "valid exploits" such as TNT/rail/carpet duplication, bedrock breaking, nether roof farming, and similar overpowered abuses are prohibited.
+
+      ## Other
+
+      See /help in-game for a list of other usable commands and utilities.  
+      For emergency contact or reporting rule violations, please contact ai03 via in-game chat or Discord.
+
+		</Prose>
+	</div>
+
+
+</Layout>

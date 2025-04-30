@@ -1,0 +1,50 @@
+---
+---
+import Prose from '@components/Prose.astro';
+import Layout from '@layouts/Layout.astro';
+import HeaderBanner from "/src/assets/header.avif"
+
+<Layout>
+
+
+	<div class="w-full !h-[360px] overflow-hidden">
+    <div class="w-full h-full relative">
+      <img src={HeaderBanner.src} class="absolute w-full h-full object-cover" />
+      <div class="absolute w-full h-full bg-[#00000060]" />
+      <div class="absolute w-full h-full flex flex-col justify-center items-center text-white gap-7">
+        <h1 class="text-3xl md:text-4xl font-[500]">Features</h1>
+      </div>
+    </div>
+	</div>
+
+	<div class="container mx-auto py-16 px-6">
+
+		<Prose>
+
+      ## Gameplay
+
+      - The server is vanilla Minecraft aside from the changes below.  
+      - Overpowered exploits available in the vanilla game are disabled.
+        - Use of the nether roof is disabled and prohibited due to its overpowered nature.  
+        - Vanilla "silently approved" exploits such as TNT/carpet/rail duping are disabled and prohibited due to the same reasons.  
+      - The player sleep percentage is currently 30%. (30% of the players must sleep to pass the night.)
+      
+      <></>
+
+			## Map Limits and Changes
+
+      - The current world border radii are the following:
+        - 2000 for the overworld (4000x4000 total)
+        - 500 for the nether (1000x1000 total)
+        - 4000 for the end (8000x8000 total)
+      - The world borders will be increased incrementally after each version update to allow access to new content.  
+      - The nether scaling is set to 1:4 rather than 1:8.
+        - This is subject to change at a future date if the world size increases massively.
+      
+      <></>
+
+		</Prose>
+	</div>
+
+
+</Layout>
