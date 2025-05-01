@@ -3,6 +3,9 @@
 import Prose from '@components/Prose.astro';
 import Layout from '@layouts/Layout.astro';
 import HeaderBanner from "/src/assets/header.avif"
+import { Image } from 'astro:assets';
+import SandRecipe from '../assets/custom-recipe-sand.png'
+import GravelRecipe from '../assets/custom-recipe-gravel.png'
 
 <Layout
 	title="Features"
@@ -36,10 +39,15 @@ import HeaderBanner from "/src/assets/header.avif"
 
       ## Custom Crafting Recipes
 
-      - Renewable Sand
-        - 8 stone + 1 iron ingot = 3 sand
-      - Renewable Gravel
-        - 8 cobblestone + 1 iron ingot = 3 gravel
+      - Renewable Sand  
+        8 stone + 1 iron ingot = 3 sand
+
+      <Image src={SandRecipe} alt="Sand recipe screenshot" class="md:max-w-2/3 lg:max-w-1/2 xl:max-w-1/3" />
+      
+      - Renewable Gravel  
+        8 cobblestone + 1 iron ingot = 3 gravel
+
+      <Image src={GravelRecipe} alt="Gravel recipe screenshot" class="md:max-w-2/3 lg:max-w-1/2 xl:max-w-1/3" />
 
       <></>
 
