@@ -52,6 +52,13 @@ export const NAV_ENTRIES_ROOT: NavEntry = {
       url: "https://mc-dynmap.ai03.com/?worldname=mc2&mapname=flat&zoom=4&x=0&y=64&z=0"
     },
 
+    // Changelog
+    {
+      type: "LEAF",
+      title: "Changelog",
+      url: "/changelog"
+    },
+
     // Back
     {
       type: "LEAF",

@@ -1,0 +1,57 @@
+---
+---
+import Prose from '@components/Prose.astro';
+import Layout from '@layouts/Layout.astro';
+import HeaderBanner from "/src/assets/header.avif"
+
+<Layout
+	title="Changelog"
+	description="A log of feature changes of mc.ai03.com."
+>
+
+
+	<div class="w-full !h-[360px] overflow-hidden">
+    <div class="w-full h-full relative">
+      <img src={HeaderBanner.src} class="absolute w-full h-full object-cover" />
+      <div class="absolute w-full h-full bg-[#00000060]" />
+      <div class="absolute w-full h-full flex flex-col justify-center items-center text-white gap-7">
+        <h1 class="text-3xl md:text-4xl font-[500]">Changelog</h1>
+      </div>
+    </div>
+	</div>
+
+	<div class="container mx-auto py-16 px-6">
+
+		<Prose>
+			## 2025-05-20
+
+      - Updated the server version to 1.21.5
+      - Increased the overworld size from 2000R to 3000R (6000 x 6000 total)
+      - Increased the nether size from 500R to 750R (1500 x 1500 total)
+      - Decreased the image fidelity of the online map to reduce disk usage
+      - Created the changelog page on the website
+
+      ## 2025-05-02
+
+      - Added custom crafting recipes for sand and gravel (details [here](http://localhost:4321/features#custom-crafting-recipes))
+
+      ## 2025-04-30
+
+      - Overhauled website with features and gameplay details documented
+
+      ## 2025-04-26
+
+      - Embedded the live map into the webpage
+
+      ## 2025-04-20
+
+      - Created the gameserver
+      - Created a rudimentary webpage
+
+      <></>
+
+		</Prose>
+	</div>
+
+
+</Layout>
